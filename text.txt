@@ -33,4 +33,6 @@ Then add boilerplate express code to get server running. Connect mongoose to app
 
 2. Add routes folder where will write all routes, import, and connect them to server/index.js
 
-3. Add controllers folder.
+3. Add controllers folder and create methods(handlers) for routes.
+
+4. Create server/models folder and use mongoose to create Schemas
