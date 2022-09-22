@@ -1,0 +1,36 @@
+in server folder:
+
+- need to use npm init -y to use npm libraries to create backend
+
+- npm init -y
+- npm i body-parser cors express mongoose nodemon
+
+- change server/package.json to include "start": "nodemon index.js" and "type": "module" to indicate where the server should run and to be able to import express instead of declaring a const
+
+body-parser:
+
+- enables us to send POST requests
+
+cors: 
+
+- enables cross origin requests
+
+express:
+
+- used as a framework for creating the routing of application
+
+mongoose:
+
+- create models for our posts
+
+nodemon:
+
+- don't have to reset server after changes
+
+
+1. First setup server folder with index.js and import all required libraries.
+Then add boilerplate express code to get server running. Connect mongoose to application.
+
+2. Add routes folder where will write all routes, import, and connect them to server/index.js
+
+3. Add controllers folder.
