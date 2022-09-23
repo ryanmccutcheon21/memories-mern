@@ -36,3 +36,11 @@ Then add boilerplate express code to get server running. Connect mongoose to app
 3. Add controllers folder and create methods(handlers) for routes.
 
 4. Create server/models folder and use mongoose to create Schemas
+
+5. Create src/api and import axios to start calling APIs
+
+6. Use Redux to manage actions towards our backend and dispatch those actions
+- create actions and reducers folders, then go to root index.js and import dependencies
+
+7. A reducer is a function that accepts state, and action. Based on the action type, it will do some logic
+- <Provider store={store} is to connect redux 
