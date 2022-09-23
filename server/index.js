@@ -7,7 +7,7 @@ import cors from 'cors';
 import postRoutes from './routes/posts.js';
 
 const app = express()
-const url = process.env.REACT_APP_CONNECTION_URL
+const url = process.env.REACT_APP_CONNECTION_URL;
 const port = process.env.PORT || 3000;
 
 // starting path for all routes
