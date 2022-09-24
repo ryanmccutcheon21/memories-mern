@@ -10,6 +10,7 @@ import useStyles from './styles'
 
 function App() {
   const classes = useStyles()
+
   // redux hook
   const dispatch = useDispatch()
   // dispatching getPosts

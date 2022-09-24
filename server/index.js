@@ -18,7 +18,7 @@ app.use(cors())
 app.use('/posts', postRoutes)
 
 const CONNECTION_URL = process.env.REACT_APP_CONNECTION_URL;
-const PORT = process.env.PORT || 3000;
+const PORT = 5000;
 
 // use mongoose to connect to MongoDB
 mongoose.connect(CONNECTION_URL, { usesNewUrlParser: true, useUnifiedTopology: true })
