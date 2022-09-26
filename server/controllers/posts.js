@@ -1,6 +1,6 @@
 // import PostMessage
 // gives us access to our model
-import PostMessage from "../models/postMessage"
+import PostMessage from "../models/postMessage.js"
 
 // create all route handlers
 export const getPosts = async (req, res) => {
