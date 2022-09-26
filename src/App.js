@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core'
 import { useDispatch } from 'react-redux';
 
@@ -9,6 +9,8 @@ import memories from './images/memories.png'
 import useStyles from './styles'
 
 function App() {
+  // getting state to share with Form and Post components for update functionality
+  const [currentId, setCurrentId] = useState(null)
   const classes = useStyles()
 
   // redux hook
@@ -16,7 +18,8 @@ function App() {
   // dispatching getPosts
   useEffect(() => {
     dispatch(getPosts())
-  }, [dispatch])
+    // using currentId means every time the id changes the getPosts() will be dispatched
+  }, [currentId, dispatch])
 
   return (
     <Container maxWidth='lg'>
@@ -28,10 +31,10 @@ function App() {
         <Container>
           <Grid container justifyContent='space-between' alignItems='stretch' spacing={3}>
             <Grid item xs={12} sm={7}>
-              <Posts />
+              <Posts setCurrentId={setCurrentId} />
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Form />
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
             </Grid>
           </Grid>
         </Container>
