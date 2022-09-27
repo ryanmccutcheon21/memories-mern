@@ -1,6 +1,6 @@
 import express from 'express'
 // import controllers
-import { getPosts, createPosts, updatePost } from '../controllers/posts.js'
+import { getPosts, createPosts, updatePost, deletePost } from '../controllers/posts.js'
 
 const router = express.Router()
 
@@ -9,5 +9,6 @@ router.post('/', createPosts)
 // update existing documents with patch
 // use : to make the route dynamic
 router.patch('/:id', updatePost)
+router.delete('/:id', deletePost)
 
 export default router
