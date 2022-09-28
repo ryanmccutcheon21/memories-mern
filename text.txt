@@ -44,3 +44,13 @@ Then add boilerplate express code to get server running. Connect mongoose to app
 
 7. A reducer is a function that accepts state, and action. Based on the action type, it will do some logic
 - <Provider store={store} is to connect redux 
+
+
+Structure to add CRUD
+- go to routes folder and add request to express router, and import it from the controllers
+- then go to controllers and add controller function to update the post 
+
+- now go to front end: 
+    - update api folder first 
+    - then update the action folder
+    - then update the reducer 
