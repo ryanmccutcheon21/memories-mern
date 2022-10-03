@@ -54,3 +54,6 @@ Structure to add CRUD
     - update api folder first 
     - then update the action folder
     - then update the reducer 
+
+
+- create constants folder for Redux to help with error debugging
