@@ -22,7 +22,7 @@ const Auth = () => {
         confirmPassword: '',
     })
     const dispatch = useDispatch()
-    const history = useHistory
+    const history = useHistory()
     const classes = useStyles()
 
     const [showPassword, setShowPassword] = useState(false)

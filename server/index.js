@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 
 // import routes
 import postRoutes from './routes/posts.js';
+import userRoutes from './routes/users.js'
 
 const app = express()
 
@@ -20,6 +21,7 @@ app.use(cors())
 // every route in posts.js will start with /posts
 // localhost:3000/posts
 app.use('/posts', postRoutes)
+app.use('/user', userRoutes)
 
 const CONNECTION_URL = process.env.REACT_APP_CONNECTION_URL;
 const PORT = process.env.REACT_APP_PORT || 5500;
