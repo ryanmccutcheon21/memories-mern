@@ -57,3 +57,42 @@ Structure to add CRUD
 
 
 - create constants folder for Redux to help with error debugging
+
+
+
+
+How do we give signed in users access to CRUD their data?
+- use middleware
+- create middleware folder in the server and import jwt
+- create middleware functions
+- use middleware in the routes/posts.js
+- add auth before routes you only want to execute for an authenticated user
+
+- add likes to Post in the postMessage model 
+- type will be string of arrays
+- default array
+
+Now go to front end
+- go to actions folder 
+- add logic to login the user now that we have backend endpoints
+- create api endpoints 
+- got to api/index.js
+- add API const 
+
+
+REDUX WORKFLOW
+- 1st we get to the form which is a component in the auth
+- once we fill in all of the inputs we want to dispatch an action
+- then come to actions folder and dispatch the action 
+- this is the logic in signin and signup consts 
+- this action makes a call to our api in api/index.js where we make POST request for data
+- we destructure that data in our actions/auth.js 
+- now we can dispatch the data as an action and pass it to our reducer 
+
+
+
+
+If token expired, log user out:
+- go to Navbar and in useEffect, check if token is expired
+- if(token)
+- import decode from jwt 
